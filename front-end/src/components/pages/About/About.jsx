@@ -3,7 +3,10 @@ function About() {
         <div className=" flex justify-center items-center m-5 text-center">
             <div className=" max-w-2xl shadow overflow-hidden sm:rounded-lg">
                 <div className="px-4 py-5 sm:px-6">
-                    <h3 className="text-4xl  leading-6 font-bold text-gray-900 ">
+                    <h3
+                        data-aos="fade-up"
+                        className="text-4xl  leading-6 font-bold text-gray-900 "
+                    >
                         ABOUT ME
                     </h3>
                 </div>
