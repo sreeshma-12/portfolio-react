@@ -3,11 +3,11 @@ import { Bars3Icon, XMarkIcon } from "@heroicons/react/24/outline";
 
 const navigation = [
     { name: "Home", href: "/", current: false },
-    { name: "About", href: "/about", current: false },
+    { name: "About", href: "#about", current: false },
 
-    { name: "Portfolio", href: "/portfolio", current: false },
-    { name: "Education", href: "/education", current: false },
-    { name: "Contact", href: "/contact", current: false },
+    { name: "Portfolio", href: "#portfolio", current: false },
+    // { name: "Education", href: "/education", current: false },
+    { name: "Contact", href: "#contact", current: false },
 ];
 
 function classNames(...classes) {

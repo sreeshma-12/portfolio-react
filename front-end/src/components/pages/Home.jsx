@@ -4,8 +4,17 @@ import { Link } from "react-router-dom";
 import About from "./About/About";
 import Portfolio from "./Portfolio";
 import Contact from "./Contact";
+import resume from "../../assets/sreeshma.pdf";
 
 const Home = () => {
+    const downloadCv = (url) => {
+        const filename = url.split("/").pop();
+        const aTag = document.createElement("a");
+        aTag.href = url;
+        aTag.setAttribute("download", filename);
+        document.body.appendChild(aTag);
+        aTag.click();
+    };
     return (
         <>
             <section className="lg:py-16 bg-gradient-to-r from-indigo-900 p-12">
@@ -23,14 +32,14 @@ const Home = () => {
                             <br></br>
                             <TypeAnimation
                                 sequence={[
-                                    "Judy",
+                                    "sreeshma",
                                     1000,
                                     "Web Developer",
                                     1000,
-                                    "Mobile Developer",
-                                    1000,
-                                    "UI/UX Designer",
-                                    1000,
+                                    // "Mobile Developer",
+                                    // 1000,
+                                    // "UI/UX Designer",
+                                    // 1000,
                                 ]}
                                 wrapper="span"
                                 speed={50}
@@ -39,18 +48,24 @@ const Home = () => {
                         </h1>
                         <p className="text-[#ADB7BE] text-base sm:text-lg mb-6 lg:text-xl"></p>
                         <div>
-                            <Link
+                            {/* <Link
                                 href="/#contact"
                                 className="px-6 inline-block py-3 w-full sm:w-fit rounded-full mr-4 bg-gradient-to-br from-primary-500 to-secondary-500 hover:bg-slate-200 text-white"
                             >
                                 Hire Me
-                            </Link>
+                            </Link> */}
                             <Link
                                 href="/"
                                 className="px-1 inline-block py-1 w-full sm:w-fit rounded-full bg-gradient-to-br from-primary-500 to-secondary-500 hover:bg-slate-800 text-white mt-3"
                             >
                                 <span className="block bg-[#121212] hover:bg-slate-800 rounded-full px-5 py-2">
-                                    Download CV
+                                    <a
+                                        onClick={() => {
+                                            downloadCv(resume);
+                                        }}
+                                    >
+                                        Download CV
+                                    </a>
                                 </span>
                             </Link>
                         </div>
@@ -77,5 +92,4 @@ const Home = () => {
         </>
     );
 };
-
 export default Home;
