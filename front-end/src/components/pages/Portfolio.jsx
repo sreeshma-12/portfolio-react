@@ -8,6 +8,14 @@ function Portfolio() {
             month: "Jul",
             year: 2023,
         },
+        {
+            name: "weather app",
+            url: "https://weather-app0034.netlify.app/ ",
+            img: "https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEh1YcA_zxXh4CYFOwNBrajApdDiQwGSVjFHy8AULNSnvJbUDbaVVAbuY6m2fhyjM4lj27lMXMSPVMERBkpK0-ZcAqvLBjPTP-BnXoFlMauTckfQr5EMtAdyZ6iwks0EoEnQxy7V1MpbkTXAXIqaqO-jwySppVASs_rPUTELGNRR3ZVB9qDzfenQH-ukmYw/s1280/IMG_20240409_161307_687.jpg",
+            description: "Weather showing application based on location",
+            month: "Apr",
+            year: 2024,
+        },
     ];
 
     return (
@@ -53,7 +61,7 @@ function Portfolio() {
                                 href="#"
                                 className="font-semibold text-lg inline-block hover:text-indigo-600 transition duration-500 ease-in-out"
                             >
-                                womanish
+                                {val.name}
                             </a>
                             <p className="text-gray-500 text-sm">
                                 {val.description}
