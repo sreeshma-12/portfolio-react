@@ -5,6 +5,7 @@ import About from "./About/About";
 import Portfolio from "./Portfolio";
 import Contact from "./Contact";
 import resume from "../../assets/sreeshma.pdf";
+import "./Home.css";
 
 const Home = () => {
     const downloadCv = (url) => {
@@ -78,9 +79,9 @@ const Home = () => {
                     >
                         <div className="rounded-full bg-[#181818] w-[250px] h-[250px] lg:w-[400px] lg:h-[400px] relative overflow-hidden">
                             <img
-                                src="https://thumbs.dreamstime.com/z/gentle-young-woman-outdoors-portrait-53986054.jpg"
+                                src="./src/assets/ph.jpg"
                                 alt="hero image"
-                                className="object-cover w-full h-full absolute top-0 left-0"
+                                className="object-contain w-full h-full absolute top-0 left-0 bg-[#f5f5f5]"
                             />
                         </div>
                     </motion.div>
